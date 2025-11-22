@@ -26,9 +26,14 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { useState } from "react"
+import { Textarea } from "@/components/ui/textarea"
 
 const createOrganizationSchema = z.object({
   name: z.string().min(1),
+  email: z.email().min(1),
+  ownerName: z.string().min(2),
+  phone: z.string().min(10),
+  address: z.string().min(10),
 })
 
 type CreateOrganizationForm = z.infer<typeof createOrganizationSchema>
@@ -39,6 +44,10 @@ export function CreateOrganizationButton() {
     resolver: zodResolver(createOrganizationSchema),
     defaultValues: {
       name: "",
+      email: "",
+      ownerName: "",
+      phone: "",
+      address: "",
     },
   })
 
@@ -52,6 +61,11 @@ export function CreateOrganizationButton() {
     const res = await authClient.organization.create({
       name: data.name,
       slug,
+      organizationEmail: data.email,
+      ownerName: data.ownerName,
+      phone: data.phone,
+      address: data.address,
+      keepCurrentActiveOrganization: true,
     })
 
     if (res.error) {
@@ -93,7 +107,64 @@ export function CreateOrganizationButton() {
                 </FormItem>
               )}
             />
-            <DialogFooter>
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input type="email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="ownerName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Owner Name</FormLabel>
+                  <FormControl>
+                    <Input {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone</FormLabel>
+                  <FormControl>
+                    <Input {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="address"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Address</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder="Type your message here." {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <DialogFooter >
               <Button
                 type="button"
                 variant="outline"
@@ -102,7 +173,7 @@ export function CreateOrganizationButton() {
               >
                 Cancel
               </Button>
-              <Button type="submit" disabled={isSubmitting} className="w-full">
+              <Button type="submit" disabled={isSubmitting}>
                 <LoadingSwap isLoading={isSubmitting}>Create</LoadingSwap>
               </Button>
             </DialogFooter>

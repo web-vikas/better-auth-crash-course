@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1763795814318,
+      "tag": "0000_bouncy_puppet_master",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1763796160336,
+      "tag": "0001_narrow_peter_quill",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1763835287109,
+      "tag": "0002_massive_whiplash",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1763838852035,
+      "tag": "0003_outstanding_morbius",
+      "breakpoints": true
+    }
+  ]
+}
