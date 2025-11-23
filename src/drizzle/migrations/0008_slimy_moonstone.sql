@@ -1,0 +1,1 @@
+ALTER TABLE "avatar" ADD COLUMN "name" text NOT NULL;

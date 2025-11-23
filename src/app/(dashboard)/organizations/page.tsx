@@ -2,7 +2,7 @@ import { auth } from "@/lib/auth/auth"
 import { headers } from "next/headers"
 import { redirect } from "next/navigation"
 import { OrganizationSelect } from "./_components/organization-select"
-import { CreateOrganizationButton } from "./_components/create-organization-button"
+import { CreateOrganizationButton } from "../../../components/organization/create-organization-button"
 import { OrganizationTabs } from "./_components/organization-tabs"
 
 export default async function OrganizationsPage() {

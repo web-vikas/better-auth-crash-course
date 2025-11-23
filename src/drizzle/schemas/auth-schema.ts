@@ -119,12 +119,12 @@ export const organization = pgTable("organization", {
   logo: text("logo"),
   createdAt: timestamp("created_at").notNull(),
   metadata: text("metadata"),
-  website: text("website"),
-  ownerName: text("owner_name").notNull(),
-  organizationEmail: text("organization_email").notNull().unique(),
-  address: text("address"),
-  mailAddress: text("mail_address"),
-  phone: text("phone"),
+  // website: text("website"),
+  // ownerName: text("owner_name").notNull(),
+  // organizationEmail: text("organization_email").notNull().unique(),
+  // address: text("address"),
+  // mailAddress: text("mail_address"),
+  // phone: text("phone"),
 });
 
 export const member = pgTable("member", {

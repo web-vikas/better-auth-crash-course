@@ -1,0 +1,1 @@
+ALTER TABLE "avatar" DROP COLUMN "id";

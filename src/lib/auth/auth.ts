@@ -86,37 +86,38 @@ export const auth = betterAuth({
       },
     }),
     organization({
-      schema: {
-        organization: {
-          additionalFields: {
-            website: {
-              type: "string",
-              required: false,
-            },
-            ownerName: {
-              type: "string",
-              required: true,
-            },
-            organizationEmail: {
-              type: "string",
-              required: true,
-              unique: true,
-            },
-            address: {
-              type: "string",
-              required: false
-            },
-            mailAddress: {
-              type: "string",
-              required: false
-            },
-            phone: {
-              type: "string",
-              required: false
-            }
-          }
-        }
-      },
+      // allowUserToCreateOrganization: true,
+      // schema: {
+      //   organization: {
+      //     additionalFields: {
+      //       website: {
+      //         type: "string",
+      //         required: false,
+      //       },
+      //       ownerName: {
+      //         type: "string",
+      //         required: true,
+      //       },
+      //       organizationEmail: {
+      //         type: "string",
+      //         required: true,
+      //         unique: true,
+      //       },
+      //       address: {
+      //         type: "string",
+      //         required: false
+      //       },
+      //       mailAddress: {
+      //         type: "string",
+      //         required: false
+      //       },
+      //       phone: {
+      //         type: "string",
+      //         required: false
+      //       }
+      //     }
+      //   }
+      // },
       sendInvitationEmail: async ({
         email,
         organization,

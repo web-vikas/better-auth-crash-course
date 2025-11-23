@@ -29,6 +29,62 @@
       "when": 1763838852035,
       "tag": "0003_outstanding_morbius",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1763870935691,
+      "tag": "0004_nappy_vulture",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1763874322332,
+      "tag": "0005_warm_thunderbolts",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1763893157896,
+      "tag": "0006_smart_jack_power",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1763893216845,
+      "tag": "0007_thin_omega_sentinel",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1763893277350,
+      "tag": "0008_slimy_moonstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1763893346223,
+      "tag": "0009_light_mister_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1763893454054,
+      "tag": "0010_wakeful_fenris",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1763893532938,
+      "tag": "0011_dazzling_pyro",
+      "breakpoints": true
     }
   ]
 }

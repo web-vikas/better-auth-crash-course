@@ -1,11 +1,12 @@
 import {
     pgTable,
     text,
-    timestamp
+    timestamp,
+    uuid
 } from "drizzle-orm/pg-core";
 
 export const avatar = pgTable("avatar", {
-    id: text("id").primaryKey(),
+    id: uuid("id").primaryKey().defaultRandom(),
     name: text("name").notNull(),
     displayName: text("display_name").notNull(),
     provider: text("provider").notNull(),

@@ -1,11 +1,13 @@
 import {
     pgTable,
+    serial,
     text,
-    timestamp
+    timestamp,
+    uuid
 } from "drizzle-orm/pg-core";
 
 export const category = pgTable("category", {
-    id: text("id").primaryKey(),
+    id: uuid("id").primaryKey().defaultRandom(),
     name: text("name").notNull(),
     status: text("status").default("draft").notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
